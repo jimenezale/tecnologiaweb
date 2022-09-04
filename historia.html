@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Historia </title>
+
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<script> addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); } </script>
+	<script src="js/jquery.min.js"></script>
+	<!--<script src="js/jquery.easydropdown.js"></script>-->
+	<!--start slider -->
+	<link rel="stylesheet" href="css/fwslider.css" media="all">
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/fwslider.js"></script>
+	<!--end slider -->
+	<script>
+		$(document).ready(function () {
+			$(".dropdown img.flag").addClass("flagvisibility");
+
+			$(".dropdown dt a").click(function () {
+				$(".dropdown dd ul").toggle();
+			});
+
+			$(".dropdown dd ul li a").click(function () {
+				var text = $(this).html();
+				$(".dropdown dt a span").html(text);
+				$(".dropdown dd ul").hide();
+				$("#result").html("Selected value is: " + getSelectedValue("sample"));
+			});
+
+			function getSelectedValue(id) {
+				return $("#" + id).find("dt a span.value").html();
+			}
+
+			$(document).bind('click', function (e) {
+				var $clicked = $(e.target);
+				if (!$clicked.parents().hasClass("dropdown"))
+					$(".dropdown dd ul").hide();
+			});
+
+
+			$("#flagSwitcher").click(function () {
+				$(".dropdown img.flag").toggleClass("flagvisibility");
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="header-left">
+						<div class="logo">
+							<a href="index.html"><img src="imagenes/qatar.png" alt="copa qatar" /></a>
+						</div>
+						<div class="menu">
+							<a class="toggleMenu" href="#"><img src="imagenes/nav.png" alt="menu" /></a>
+							<ul class="nav" id="nav">
+								<li class="current"><a href="historia.html">Historia</a></li>
+								<li><a href="equipos.html">Equipos</a></li>
+								<li><a href="shop.html">Codigos qr</a></li>
+								<li><a href="documentacion.html">¿Que necesito para llegar?</a></li>
+								<li><a href="contact.html">Como llegar</a></li>
+							</ul>
+							<div class="clear"></div>
+							<script src="js/responsive-nav.js"></script>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="header_right">
+						<div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search"
+										name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch(document.getElementById('sb-search'));
+						</script>
+
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="shop_top">
+			<div class="container">
+				<div class="row ex_box">
+
+					<h3 class="m_2">Qatar 2022</h3>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="col-md-12 team1">
+						<div class="img_section magnifier2">
+							<a class="fancybox" href="#" data-fancybox-group="gallery"
+								title="Lorem ipsum dolor sit amet"><img src="images/e1.jpg" class="img-responsive"
+									alt=""><span> </span>
+								<div class="img_section_txt">
+									<p>
+										La Copa Mundial de Fútbol de la FIFA Catar 2022
+										(en árabe, كأس العالم لكرة القدم قطر 2022) será
+										la XXII edición de la Copa Mundial de Fútbol
+										masculino organizada por la FIFA. Esta edición
+										se realizará desde el 21 de noviembre al 18 de
+										diciembre de 2022 en Catar, que consiguió los
+										derechos de organización el 2 de diciembre de 2010.
+									</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+			<div class="container">
+				<div class="row ex_box">
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="col-md-12 team1">
+						<div class="img_section magnifier2">
+							<a class="fancybox" href="#" data-fancybox-group="gallery"
+								title="Lorem ipsum dolor sit amet"><img src="images/e4.jpg" class="img-responsive"
+									alt=""><span> </span>
+								<div class="img_section_txt">
+									<p>
+										Esta será la tercera vez que la Copa del Mundo
+										de la FIFA se disputará en el continente asiático
+										tras la Copa Mundial de Fútbol de 2002 en Corea del
+										Sur y Japón y el de Rusia 2018 (aunque esta última
+										contaba con una única sede en territorio asiático),
+										y la primera que se celebra en Asia Occidental,
+										dada la ubicación euroasiática de la que gozaba
+										el anterior anfitrión: Rusia.
+									</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+
+			<div class="container">
+				<div class="row ex1_box">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="col-md-12 team1">
+						<div class="img_section magnifier2">
+							<a class="fancybox" href="#" data-fancybox-group="gallery"
+								title="Lorem ipsum dolor sit amet"><img src="images/e7.jpg" class="img-responsive"
+									alt=""><span> </span>
+								<div class="img_section_txt">
+									<p>
+										También por primera
+										vez, el torneo tiene lugar en Oriente Próximo, en
+										un país árabe y de mayoría musulmana, así como el
+										de menor extensión territorial.Igualmente será el
+										Mundial de mayor tiempo de espera desde 1950 respecto
+										a su edición anterior, ya que se desarrollará entre
+										los meses de noviembre y diciembre de 2022, a
+										diferencia de los meses habituales de junio y julio.
+
+										De forma paralela será la Copa Mundial de Fútbol más
+										corta desde 1978, pues durará solamente 28 días a diferencia
+										de los 32 días habituales en los últimos campeonatos.
+									</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<br>
+			</div>
+			<div class="container">
+				<div class="row ex_box">
+					<h3 class="m_2">Mascota y mercado</h3>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="col-md-12 team1">
+						<div class="img_section magnifier2">
+							<a class="fancybox" href="#" data-fancybox-group="gallery"
+								title="Lorem ipsum dolor sit amet"><img src="images/e1.jpg" class="img-responsive"
+									alt=""><span> </span>
+								<div class="img_section_txt">
+									<p>
+										La mascota oficial del Mundial de Catar 2022 es La'eeb que fue presentado
+										el 1 de abril de 2022 en el sorteo para definir los grupos.
+									</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row ex_box">
+					<h3 class="m_2">Cancion oficial</h3>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="col-md-12 team1">
+						<div class="img_section magnifier2">
+							<a class="fancybox" href="#" data-fancybox-group="gallery"
+								title="Lorem ipsum dolor sit amet"><img src="images/e1.jpg" class="img-responsive"
+									alt=""><span> </span>
+								<div class="img_section_txt">
+									<p>
+										La mascota oficial del Mundial de Catar 2022 es La'eeb que fue presentado
+										el 1 de abril de 2022 en el sorteo para definir los grupos.
+									</p>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="video">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/vyDjFVZgJoo"
+					title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen>
+				</iframe>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<h4>Integrantes</h4>
+					<ul class="footer_box">
+						<li><a href="#">Diana</a></li>
+						<li><a href="#">Edwin</a></li>
+						<li><a href="#">Jessica</a></li>
+						<li><a href="#">Alejandra</a></li>
+						<li><a href="#">Jhonatan</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Sobre</h4>
+					<ul class="footer_box">
+						<li><a href="#">Fecha de creacion: 08/08/2022</a></li>
+						<li><a href="#">Codigo postal :0000</a></li>
+						<li><a href="#">Cochabamba</a></li>
+						<li><a href="#">Bolivia</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Soporte</h4>
+					<ul class="footer_box">
+						<li><a href="#">Visitenos</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Informaciones</h4>
+					<div class="footer_box">
+						<div class="footer_search">
+							<form>
+								<input type="text" value="Enter your email" onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Enter your email';}">
+								<input type="submit" value="Go">
+							</form>
+						</div>
+						<ul class="social">
+							<li class="facebook"><a href="#"><span> </span></a></li>
+							<li class="twitter"><a href="#"><span> </span></a></li>
+							<li class="instagram"><a href="#"><span> </span></a></li>
+							<li class="pinterest"><a href="#"><span> </span></a></li>
+							<li class="youtube"><a href="#"><span> </span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_bottom">
+				<div class="copy">
+					<p>© 2014 creado por <a href="#" target="_blank"> J2ea2 </a></p>
+				</div>
+				<dl id="sample" class="dropdown">
+					<dt><a href="#"><span>Cambia de lenguaje</span></a></dt>
+					<dd>
+						<ul>
+							<li><a href="#">Australia<img class="flag" src="imagenes/as.png" alt="" /><span
+										class="value">AS</span></a></li>
+							<li><a href="#">Sri Lanka<img class="flag" src="imagenes/srl.png" alt="" /><span
+										class="value">SL</span></a></li>
+							<li><a href="#">Newziland<img class="flag" src="imagenes/nz.png" alt="" /><span
+										class="value">NZ</span></a></li>
+							<li><a href="#">Pakistan<img class="flag" src="imagenes/pk.png" alt="" /><span
+										class="value">Pk</span></a></li>
+							<li><a href="#">United Kingdom<img class="flag" src="imagenes/uk.png" alt="" /><span
+										class="value">UK</span></a></li>
+							<li><a href="#">United States<img class="flag" src="imagenes/us.png" alt="" /><span
+										class="value">US</span></a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

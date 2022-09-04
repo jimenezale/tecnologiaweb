@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Documentacion</title>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<script> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".dropdown img.flag").addClass("flagvisibility");
+
+			$(".dropdown dt a").click(function () {
+				$(".dropdown dd ul").toggle();
+			});
+
+			$(".dropdown dd ul li a").click(function () {
+				var text = $(this).html();
+				$(".dropdown dt a span").html(text);
+				$(".dropdown dd ul").hide();
+				$("#result").html("Selected value is: " + getSelectedValue("sample"));
+			});
+
+			function getSelectedValue(id) {
+				return $("#" + id).find("dt a span.value").html();
+			}
+
+			$(document).bind('click', function (e) {
+				var $clicked = $(e.target);
+				if (!$clicked.parents().hasClass("dropdown"))
+					$(".dropdown dd ul").hide();
+			});
+
+
+			$("#flagSwitcher").click(function () {
+				$(".dropdown img.flag").toggleClass("flagvisibility");
+			});
+		});
+	</script>
+	
+	
+	<link rel="stylesheet" href="css/etalage.css">
+	<script src="js/jquery.etalage.min.js"></script>
+	
+	<script>
+		jQuery(document).ready(function ($) {
+
+			$('#etalage').etalage({
+				thumb_image_width: 300,
+				thumb_image_height: 400,
+
+				show_hint: true,
+				click_callback: function (image_anchor, instance_id) {
+					alert('Callback example:\nYou clicked on an image with the anchor: "' + image_anchor + '"\n(in Etalage instance: "' + instance_id + '")');
+				}
+			});
+			// This is for the dropdown list example:
+			$('.dropdownlist').change(function () {
+				etalage_show($(this).find('option:selected').attr('class'));
+			});
+
+		});
+	</script>
+</head>
+
+<body>
+	<div class="header">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="header-left">
+						<div class="logo">
+							<a href="index.html"><img src="imagenes/qatar.png" alt="copa qatar" /></a>
+						</div>
+						<div class="menu">
+							<a class="toggleMenu" href="#"><img src="imagenes/nav.png" alt="menu" /></a>
+							<ul class="nav" id="nav">
+								<li><a href="historia.html">Historia</a></li>
+								<li><a href="equipos.html">Equipos</a></li>
+								<li><a href="shop.html">Codigos qr</a></li>
+								<li class="current"><a href="documentacion.html">¿Que necesito para llegar?</a></li>
+								<li><a href="contact.html">Como llegar</a></li>
+							</ul>
+							<div class="clear"></div>
+							<script src="js/responsive-nav.js"></script>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="header_right">
+						<!-- start search-->
+						<div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search"
+										name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+						
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch(document.getElementById('sb-search'));
+						</script>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="shop_top">
+			<div class="container">
+				<div class="desc">
+					<h4>REQUISITOS PARA PODER ENTRAR A QATAR 2022</h4>
+					<p>
+						Debido a que se prevé gran asistencia de aficionados al Mundial Qatar 2022, se agregaron más
+						requisitos a la lista, que aunque no tienen nada que ver con el covid-19, es necesario para
+						poder ingresar a este destino.
+					</p>
+				</div>
+				<div class="row">
+					<h4 class="m_11">Aquí te dejamos la lista completa<br> Viajeros deberan presentar:</h4>
+					<br>
+					<div class="col-md-4 product1">
+						<div class="shop_desc">
+								<ul class="buttons">
+									<li class="cart"><a href="#">Pasaporte en buen estado con vigencia mínima de seis
+											meses </a></li>
+									
+								</ul>
+								<div class="clear"> </div>
+						</div>
+					</div>
+					<div class="col-md-4 product1">
+						<div class="shop_desc">
+								<ul class="buttons">
+									<li class="cart"><a href="#">Tener boleto de vuelo de regreso</a></li>
+									
+								</ul>
+								<div class="clear"> </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="shop_desc">
+								<ul class="buttons">
+									<li class="cart"><a href="#">Comprobar de manera impresa que ya cuentas con
+											alojamiento reservado</a></li>
+									
+								</ul>
+								<div class="clear"> </div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 product1">
+						<div class="shop_desc">
+								<ul class="buttons">
+									<li class="cart"><a href="#">Firmar el formulario de compromiso y reconocimiento que
+											puedes encontrar en el sitio web del Ministerio de la Salud Pública</a></li>
+									
+								</ul>
+								<div class="clear"> </div>
+						</div>
+					</div>
+					<div class="col-md-4 product1">
+						<div class="shop_desc">
+								<ul class="buttons">
+									<li class="cart">
+										Por lo menos, tres días antes de tu viaje, tienes que
+									    registrarte en la página <a href="www.ehteraz.gov.qa">www.ehteraz.gov.qa</a>
+										en donde subirás tus documentos.
+									</li>
+									
+								</ul>
+								<div class="clear"> </div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="shop_desc">
+								<ul class="buttons">
+									<li class="cart"><a href="#">Descargar la app Ehteraz a tu teléfono celular, el cual
+											tendrá que tener una tarjeta SIM local</a></li>
+									
+								</ul>
+								<div class="clear"> </div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 product1">
+						<div class="shop_desc">
+								<ul class="buttons">
+									<li class="cart"><a href="#">• No olvides que es necesario que tengas la tarjeta
+											Hayya, que funciona como el permiso para poder entrar al estado de Qatar,
+											así como a los estadios</a></li>
+									
+								</ul>
+								<div class="clear"> </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<h4>Integrantes</h4>
+					<ul class="footer_box">
+						<li><a href="#">Diana</a></li>
+						<li><a href="#">Edwin</a></li>
+						<li><a href="#">Jessica</a></li>
+						<li><a href="#">Alejandra</a></li>
+						<li><a href="#">Jhonatan</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Sobre</h4>
+					<ul class="footer_box">
+						<li><a href="#">Fecha de creacion: 08/08/2022</a></li>
+						<li><a href="#">Codigo postal :0000</a></li>
+						<li><a href="#">Cochabamba</a></li>
+						<li><a href="#">Bolivia</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Soporte</h4>
+					<ul class="footer_box">
+						<li><a href="#">Visitenos</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Informaciones</h4>
+					<div class="footer_box">
+						<div class="footer_search">
+							<form>
+								<input type="text" value="Enter your email" onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Enter your email';}">
+								<input type="submit" value="Go">
+							</form>
+						</div>
+						<ul class="social">
+							<li class="facebook"><a href="#"><span> </span></a></li>
+							<li class="twitter"><a href="#"><span> </span></a></li>
+							<li class="instagram"><a href="#"><span> </span></a></li>
+							<li class="pinterest"><a href="#"><span> </span></a></li>
+							<li class="youtube"><a href="#"><span> </span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_bottom">
+				<div class="copy">
+					<p>© 2014 creado por <a href="#" target="_blank"> J2ea2 </a></p>
+				</div>
+				<dl id="sample" class="dropdown">
+					<dt><a href="#"><span>Cambia de lenguaje</span></a></dt>
+					<dd>
+						<ul>
+							<li><a href="#">Australia<img class="flag" src="imagenes/as.png" alt="" /><span
+										class="value">AS</span></a></li>
+							<li><a href="#">Sri Lanka<img class="flag" src="imagenes/srl.png" alt="" /><span
+										class="value">SL</span></a></li>
+							<li><a href="#">Newziland<img class="flag" src="imagenes/nz.png" alt="" /><span
+										class="value">NZ</span></a></li>
+							<li><a href="#">Pakistan<img class="flag" src="imagenes/pk.png" alt="" /><span
+										class="value">Pk</span></a></li>
+							<li><a href="#">United Kingdom<img class="flag" src="imagenes/uk.png" alt="" /><span
+										class="value">UK</span></a></li>
+							<li><a href="#">United States<img class="flag" src="imagenes/us.png" alt="" /><span
+										class="value">US</span></a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

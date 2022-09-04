@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contactos</title>
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+	<script> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".dropdown img.flag").addClass("flagvisibility");
+
+			$(".dropdown dt a").click(function () {
+				$(".dropdown dd ul").toggle();
+			});
+
+			$(".dropdown dd ul li a").click(function () {
+				var text = $(this).html();
+				$(".dropdown dt a span").html(text);
+				$(".dropdown dd ul").hide();
+				$("#result").html("Selected value is: " + getSelectedValue("sample"));
+			});
+
+			function getSelectedValue(id) {
+				return $("#" + id).find("dt a span.value").html();
+			}
+
+			$(document).bind('click', function (e) {
+				var $clicked = $(e.target);
+				if (!$clicked.parents().hasClass("dropdown"))
+					$(".dropdown dd ul").hide();
+			});
+
+
+			$("#flagSwitcher").click(function () {
+				$(".dropdown img.flag").toggleClass("flagvisibility");
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="header-left">
+						<div class="logo">
+							<a href="index.html"><img src="imagenes/qatar.png" alt="copa qatar" /></a>
+						</div>
+						<div class="menu">
+							<a class="toggleMenu" href="#"><img src="imagenes/nav.png" alt="menu" /></a>
+							<ul class="nav" id="nav">
+								<li><a href="historia.html">Historia</a></li>
+								<li><a href="equipos.html">Equipos</a></li>
+								<li ><a href="shop.html">Codigos qr</a></li>
+								<li><a href="documentacion.html">¿Que necesito para llegar?</a></li>
+								<li class="current"><a href="contact.html">Como llegar</a></li>
+								
+							</ul>
+							<div class="clear"></div>
+							<script src="js/responsive-nav.js"></script>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="header_right">
+						<!-- start search-->
+						<div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search"
+										name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+						
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch(document.getElementById('sb-search'));
+						</script>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="shop_top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="map">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d923087.7182929453!2d51.2177501!3d25.344109000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e45c534ffdce87f%3A0x1cfa88cf812b4032!2sCatar!5e0!3m2!1ses-419!2sbo!4v1662039154033!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"><br><small><a
+									href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Lighthouse+Point,+FL,+United+States&amp;aq=4&amp;oq=light&amp;sll=26.275636,-80.087265&amp;sspn=0.04941,0.104628&amp;ie=UTF8&amp;hq=&amp;hnear=Lighthouse+Point,+Broward,+Florida,+United+States&amp;t=m&amp;z=14&amp;ll=26.275636,-80.087265"
+									style="color:#666;text-align:left;font-size:12px"></a></small>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<p class="m_8">El estadio se encuentra en la ciudad de Doha, Qatar y cuenta con una capacidad
+							para 44,950 aficionados,
+							la superficie es de césped natural y cuenta con la más moderna tecnología jamás vista. Fue
+							diseñado por la firma
+							de arquitectos españoles Fenwick Ibarren, que tenían como innovación el poder hacer un
+							escenario desmontable y de
+							distintos usos al término de la justa mundialista.
+							Lleva el nombre 974 por la cantidad de contenedores que forman el exterior y además por ser
+							el prefijo de marcación telefónica de Qatar.</p>
+						<div class="address">
+							<p>LA COPA MUNDIAL QATAR 2022,</p>
+							<p>22-56-11-21 Estadio Internacional Khalifa, Estadio Qatar Foundation y Estadio Ahmed bin
+								Ali.,</p>
+							<p>QATAR</p>
+							<p>Phone:(591+) 67539510</p>
+							<p>Email: <span>J2ea2@gmail.com</span></p>
+							<p>Follow on: <span>Facebook</span>, <span>Twitter</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<h4>Integrantes</h4>
+					<ul class="footer_box">
+						<li><a href="#">Diana</a></li>
+						<li><a href="#">Edwin</a></li>
+						<li><a href="#">Jessica</a></li>
+						<li><a href="#">Alejandra</a></li>
+						<li><a href="#">Jhonatan</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Sobre</h4>
+					<ul class="footer_box">
+						<li><a href="#">Fecha de creacion: 08/08/2022</a></li>
+						<li><a href="#">Codigo postal :0000</a></li>
+						<li><a href="#">Cochabamba</a></li>
+						<li><a href="#">Bolivia</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Soporte</h4>
+					<ul class="footer_box">
+						<li><a href="#">Visitenos</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Informaciones</h4>
+					<div class="footer_box">
+						<div class="footer_search">
+							<form>
+								<input type="text" value="Enter your email" onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Enter your email';}">
+								<input type="submit" value="Go">
+							</form>
+						</div>
+						<ul class="social">
+							<li class="facebook"><a href="#"><span> </span></a></li>
+							<li class="twitter"><a href="#"><span> </span></a></li>
+							<li class="instagram"><a href="#"><span> </span></a></li>
+							<li class="pinterest"><a href="#"><span> </span></a></li>
+							<li class="youtube"><a href="#"><span> </span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_bottom">
+				<div class="copy">
+					<p>© 2014 creado por <a href="#" target="_blank"> J2ea2 </a></p>
+				</div>
+				<dl id="sample" class="dropdown">
+					<dt><a href="#"><span>Cambia de lenguaje</span></a></dt>
+					<dd>
+						<ul>
+							<li><a href="#">Australia<img class="flag" src="imagenes/as.png" alt="" /><span
+										class="value">AS</span></a></li>
+							<li><a href="#">Sri Lanka<img class="flag" src="imagenes/srl.png" alt="" /><span
+										class="value">SL</span></a></li>
+							<li><a href="#">Newziland<img class="flag" src="imagenes/nz.png" alt="" /><span
+										class="value">NZ</span></a></li>
+							<li><a href="#">Pakistan<img class="flag" src="imagenes/pk.png" alt="" /><span
+										class="value">Pk</span></a></li>
+							<li><a href="#">United Kingdom<img class="flag" src="imagenes/uk.png" alt="" /><span
+										class="value">UK</span></a></li>
+							<li><a href="#">United States<img class="flag" src="imagenes/us.png" alt="" /><span
+										class="value">US</span></a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

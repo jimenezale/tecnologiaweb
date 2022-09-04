@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Qr's sobre qatar</title>
+
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<script> addEventListener("load", function () { setTimeout(hideURLbar, 0); }, false); function hideURLbar() { window.scrollTo(0, 1); } </script>
+	<script src="js/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$(".dropdown img.flag").addClass("flagvisibility");
+
+			$(".dropdown dt a").click(function () {
+				$(".dropdown dd ul").toggle();
+			});
+
+			$(".dropdown dd ul li a").click(function () {
+				var text = $(this).html();
+				$(".dropdown dt a span").html(text);
+				$(".dropdown dd ul").hide();
+				$("#result").html("Selected value is: " + getSelectedValue("sample"));
+			});
+
+			function getSelectedValue(id) {
+				return $("#" + id).find("dt a span.value").html();
+			}
+
+			$(document).bind('click', function (e) {
+				var $clicked = $(e.target);
+				if (!$clicked.parents().hasClass("dropdown"))
+					$(".dropdown dd ul").hide();
+			});
+
+
+			$("#flagSwitcher").click(function () {
+				$(".dropdown img.flag").toggleClass("flagvisibility");
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="header-left">
+						<div class="logo">
+							<a href="index.html"><img src="imagenes/qatar.png" alt="copa qatar" /></a>
+						</div>
+						<div class="menu">
+							<a class="toggleMenu" href="#"><img src="imagenes/nav.png" alt="menu" /></a>
+							<ul class="nav" id="nav">
+								<li><a href="historia.html">Historia</a></li>
+								<li><a href="equipos.html">Equipos</a></li>
+								<li class="current"><a href="shop.html">Codigos qr</a></li>
+								<li><a href="documentacion.html">¿Que necesito para llegar?</a></li>
+								<li><a href="contact.html">Como llegar</a></li>
+							</ul>
+							<div class="clear"></div>
+							<script src="js/responsive-nav.js"></script>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="header_right">
+						<!-- start search-->
+						<div class="search-box">
+							<div id="sb-search" class="sb-search">
+								<form>
+									<input class="sb-search-input" placeholder="Enter your search term..." type="search"
+										name="search" id="search">
+									<input class="sb-search-submit" type="submit" value="">
+									<span class="sb-icon-search"> </span>
+								</form>
+							</div>
+						</div>
+
+						<script src="js/classie.js"></script>
+						<script src="js/uisearch.js"></script>
+						<script>
+							new UISearch(document.getElementById('sb-search'));
+						</script>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="shop_top">
+			<div class="container">
+				<div class="row shop_box-top">
+					<div class="col-md-3 shop_box">
+						<a href="https://youtu.be/86FBjS0f8GU">
+							<img src="imagenes/premioCoCa.png" class="img-responsive" alt="">
+						</a>
+						<div class="shop_desc">
+							<h3><a href="https://youtu.be/86FBjS0f8GU">Premio Cocacola</a></h3>
+							<p>Promo en la tapa de la soda </p>
+
+						</div>
+					</div>
+					<div class="col-md-3 shop_box">
+						<a href="https://twitter.com/roadto2022es/status/1509927447571189762">
+							<img src="imagenes/Mascota.png" class="img-responsive" alt="">
+						</a>
+						<div class="shop_desc">
+							<h3><a href="https://twitter.com/roadto2022es/status/1509927447571189762">Mascota</a></h3>
+							<p>Mascota oficial del Qatar 2022 </p>
+						</div>
+					</div>
+					<div class="col-md-3 shop_box">
+						<a href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar2022/tickets">
+							<img src="imagenes/VentaEntradas.png" class="img-responsive" alt="">
+						</a>
+						<div class="shop_desc">
+							<h3><a href="https://www.fifa.com/fifaplus/en/tournaments/mens/worldcup/qatar2022/tickets">Venta en linea</a></h3>
+							<p>Venta de entradas en linea en los diferentes campos deportivos</p>
+						</div>
+					</div>
+					<div class="col-md-3 shop_box">
+						<a href="https://www.univiajes.viajes/site/tips-detalle.php?id=79#:~:text=El%20Mundial%20de%20Qatar%20ser%C3%A1,promedio%20es%20de%2020%20grados.">
+							<img src="imagenes/fixtureMundial.png" class="img-responsive" alt="">
+						</a>
+						<div class="shop_desc">
+							<h3><a href="https://www.univiajes.viajes/site/tips-detalle.php?id=79#:~:text=El%20Mundial%20de%20Qatar%20ser%C3%A1,promedio%20es%20de%2020%20grados.">Fixture del Qatar 2022</a></h3>
+							<p>Fixture del mundial dia y hora de cada equipo</p>
+						</div>
+					</div>
+				</div>
+				<div class="row shop_box-top">
+					<div class="col-md-3 shop_box">
+						<a href="#">
+							<img src="imagenes/informacion.png" class="img-responsive" alt="">
+						</a>
+						<div class="shop_desc">
+							<h3><a href="#">Informacion del qatar</a></h3>
+							<p>Datos sobre el qatar </p>
+						</div>
+					</div>
+
+					<div class="col-md-3 shop_box">
+						<a href="https://www.cronista.com/mundial-qatar-2022/mundial-de-qatar-2022-cuales-son-los-mejores-lugares-turisticos-para-conocer-en-doha-y-pasear-por-la-ciudad/">
+							<img src="imagenes/turismo.png" class="img-responsive" alt="">
+						</a>
+						<div class="shop_desc">
+							<h3><a href="https://www.cronista.com/mundial-qatar-2022/mundial-de-qatar-2022-cuales-son-los-mejores-lugares-turisticos-para-conocer-en-doha-y-pasear-por-la-ciudad/">Turismo Qatar</a></h3>
+							<p>Lugares turisticos para visitar </p>
+						</div>
+					</div>
+
+					<div class="col-md-3 shop_box">
+						<a href="https://www.goal.com/es/noticias/cuantos-estadios-mundial-qatar-2022-fueron-construidos-cuales-remodelaron/bltd8086c680cfec9fd">
+							<img src="imagenes/estadium.png" class="img-responsive" alt="">
+						</a>
+						<div class="shop_desc">
+							<h3><a href="https://www.goal.com/es/noticias/cuantos-estadios-mundial-qatar-2022-fueron-construidos-cuales-remodelaron/bltd8086c680cfec9fd">Estadium del Qatar 22</a></h3>
+							<p>Informacion de los estadium del qatar 22 sus lugares </p>
+						</div>
+					</div>
+
+					<div class="col-md-3 shop_box">
+						<a href="https://www.goal.com/es/noticias/guia-del-mundial-qatar-2022-cuando-donde-y-como-se-juega/pzdfysrlstlt1o2kfu4zuh2ng">
+							<img src="imagenes/participacion.png" class="img-responsive" alt="">
+						</a>
+						<div class="shop_desc">
+							<h3><a href="https://www.goal.com/es/noticias/guia-del-mundial-qatar-2022-cuando-donde-y-como-se-juega/pzdfysrlstlt1o2kfu4zuh2ng">Participacion</a>
+							</h3>
+							<p>Estado de participacion de los
+								jugadores del mundial Qatar 22
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<h4>Integrantes</h4>
+					<ul class="footer_box">
+						<li><a href="#">Diana</a></li>
+						<li><a href="#">Edwin</a></li>
+						<li><a href="#">Jessica</a></li>
+						<li><a href="#">Alejandra</a></li>
+						<li><a href="#">Jhonatan</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Sobre</h4>
+					<ul class="footer_box">
+						<li><a href="#">Fecha de creacion: 08/08/2022</a>
+						</li>
+						<li><a href="#">Codigo postal :0000</a></li>
+						<li><a href="#">Cochabamba</a></li>
+						<li><a href="#">Bolivia</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Soporte</h4>
+					<ul class="footer_box">
+						<li><a href="#">Visitenos</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4>Informaciones</h4>
+					<div class="footer_box">
+						<div class="footer_search">
+							<form>
+								<input type="text" value="Enter your email" onfocus="this.value = '';"
+									onblur="if (this.value == '') {this.value = 'Enter your email';}">
+								<input type="submit" value="Go">
+							</form>
+						</div>
+						<ul class="social">
+							<li class="facebook"><a href="#"><span>
+									</span></a></li>
+							<li class="twitter"><a href="#"><span>
+									</span></a></li>
+							<li class="instagram"><a href="#"><span>
+									</span></a></li>
+							<li class="pinterest"><a href="#"><span>
+									</span></a></li>
+							<li class="youtube"><a href="#"><span>
+									</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_bottom">
+				<div class="copy">
+					<p>© 2014 creado por <a href="#" target="_blank"> J2ea2
+						</a></p>
+				</div>
+				<dl id="sample" class="dropdown">
+					<dt><a href="#"><span>Cambia de lenguaje</span></a></dt>
+					<dd>
+						<ul>
+							<li><a href="#">Australia<img class="flag" src="imagenes/as.png" alt="" /><span
+										class="value">AS</span></a></li>
+							<li><a href="#">Sri Lanka<img class="flag" src="imagenes/srl.png" alt="" /><span
+										class="value">SL</span></a></li>
+							<li><a href="#">Newziland<img class="flag" src="imagenes/nz.png" alt="" /><span
+										class="value">NZ</span></a></li>
+							<li><a href="#">Pakistan<img class="flag" src="imagenes/pk.png" alt="" /><span
+										class="value">Pk</span></a></li>
+							<li><a href="#">United Kingdom<img class="flag" src="imagenes/uk.png" alt="" /><span
+										class="value">UK</span></a></li>
+							<li><a href="#">United States<img class="flag" src="imagenes/us.png" alt="" /><span
+										class="value">US</span></a></li>
+						</ul>
+					</dd>
+				</dl>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
